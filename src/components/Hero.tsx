@@ -1,9 +1,22 @@
 'use client';
 
-import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaCheck } from 'react-icons/fa';
 
 const Hero = () => {
+  const [emailCopied, setEmailCopied] = useState(false);
+  const email = 'salome@lavine.com';
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email: ', err);
+    }
+  };
+
   const socialLinks = [
     {
       name: 'GitHub',
@@ -14,11 +27,6 @@ const Hero = () => {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/salomé-lavine-aa68102b6/',
       icon: FaLinkedin
-    },
-    {
-      name: 'Email',
-      url: 'mailto:salome@lavine.com',
-      icon: FaEnvelope
     }
   ];
 
@@ -53,6 +61,23 @@ const Hero = () => {
                 <link.icon className="text-3xl" />
               </a>
             ))}
+            <button
+              onClick={copyEmail}
+              className="text-gray-600 hover:text-primary transition-colors relative group"
+              aria-label="Copy email address"
+              title={emailCopied ? "Email copied!" : "Copy email address"}
+            >
+              {emailCopied ? (
+                <FaCheck className="text-3xl text-green-500" />
+              ) : (
+                <FaEnvelope className="text-3xl" />
+              )}
+              {!emailCopied && (
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  Copy email
+                </span>
+              )}
+            </button>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">

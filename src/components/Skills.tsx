@@ -10,11 +10,10 @@ const Skills = () => {
         'MATLAB',
         'Python',
         'CAD Software',
-        'C',
-        'C++ (arduino)',
+        'Arduino (C/C++/C#)',
         'Labview',
         'Simulink', 
-        'Latex',
+        'CFD',
       ]
     },
     {

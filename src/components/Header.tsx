@@ -37,7 +37,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -47,6 +47,14 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href="/project/cv-2.pdf"
+              download="Salome_Lavine_CV.pdf"
+              className="text-gray-700 hover:text-primary transition-colors"
+              title="Download CV"
+            >
+              CV
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -87,6 +95,15 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="/project/cv-2.pdf"
+                download="Salome_Lavine_CV.pdf"
+                className="text-gray-700 hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+                title="Download CV"
+              >
+                CV
+              </a>
             </div>
           </div>
         )}

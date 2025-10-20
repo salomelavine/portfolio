@@ -1,44 +1,67 @@
 'use client';
 
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+
+type ExperienceItem = {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: (string | JSX.Element)[];
+  website?: string;
+  githubUrl?: string;
+  companyUrl?: string;
+};
 
 const Experience = () => {
   
-  const Semester_project =[ {
-    title: 'Impact assesment on lithium extraction and mineralization',
-    company: 'EPFL',
-    location: 'Sion, Switzerland',
-    period: 'february - jully 2024',
+  const Semester_projects: ExperienceItem[] =[{ 
+    title: '15 minutes market, Loop blocks BESS',
+    company: 'Distributed Electrical Systems Laboratory, DESL',
+    companyUrl: 'https://www.epfl.ch/labs/desl/',
+    location: 'EPFL, Lausanne, Switzerland',
+    period: 'septembre 2025- current',
     description: [
-      'Impact assessment on lithium extraction and mineralization.',
-      'Collaborated on a project to optimize building energy efficiency through innovative design solutions.',
-      'Technologies: Activity-Browser, Quarto, Python, Brightway2',
-      'Category: Life Cycle Assessment'
+      'At the DESL Lab, supervised under a Phd, I modelled optimal bidding strategies for renewables and BESSs in 15-minute European electricity markets using Python and optimization. After the goal is to use thedata from the EPEX-spot EU market, to compare the results.',
+      'Tools : CXVPY, Gurobi',
+    ],
+    githubUrl: 'https://github.com/DESL-EPFL/ESS-loop-blocks',
+  
+  } ,
+  {
+    title: 'Impact Assessment of 1kWh Batterie Through Co-Production of Lithium and CO₂ Mineralization',
+    company: 'Industrial Process and Energy Systems Engineering , IPESE',
+    companyUrl: 'https://www.epfl.ch/labs/ipese/',
+    location: 'EPFLSion, Switzerland',
+    period: 'february - jully 2025',
+    description: [
+      'At the IPESE Lab, Impact Assessment of 1 kWh battery produced via co-extraction of lithium, Ca and Mg from European brines coupled with Carbon seques- tration using a mineralization processes.',
+      'Tools : Activity-Browser, Quarto, Python, Brightway2',
     ],
     website: 'https://salomelavine.github.io/Impact-Assessment-of-1kWh-Batteries-Through-Co-Production-of-Lithium-and-CO-Mineralization/'
-  }]
-  const experiences = [
+  }, 
+]
+  const workingExperiences: ExperienceItem[] = [
     {
-      title: "Teaching assistant",
+      title: "Teaching Assistant",
       company: "EPFL",
       location: "Lausanne, Switzerland",
       period: "2022 - Present",
       description: [
-        "Helping student during the exercice session, in collaboration with the cours teatcher",
-        "Algebra I",
-        "Vibrating Mechanics",
-        "Calculus I",
-        "Physics I: Thermodynamics", 
+        "Helping student during a semester to understand the theory and answering questions during the exercice session, in different courses since 4 years, supervising around (100 students for 3 TA)",
+        "Teaching assistant for the following courses: Algebra I, Vibrating Mechanics, Calculus I, Thermodynamics ",
       ]
     },
     {
       title: "Scientastic",
       company: "EPFL",
+      companyUrl: "https://scientastic.epfl.ch",
       location: "Lausanne, Switzerland",
       period: "2025",
       description: [
         "During an entire weekend, as a team of 3 we were in charge to animate a discovery seesion of arduino, for teenager ",
-        "Scientastic", <a href="https://scientastic.epfl.ch" target="red" rel="noopener noreferrer">EPFL</a> ,
+        "Also presnetation of a module for an entire other weekend",
       ]
     },
   ];
@@ -47,12 +70,10 @@ const Experience = () => {
     {
       id: 1,
       organization: 'Artiphys Festival',
-      role: 'Entertainment Manager & Board Committee Member',
+      role: 'Entertainment Manager, V-P',
       period: '2022 – 2024',
-      description: ['Student organization for a music festival on campus',
-      'member then board committee (entertainment manager)', 
-      'This event is a msuic festival with the goal to create a safe place for the student, focusing on prevention and sustainability', 
-      'I spent 2 year working on the project'
+      description: [
+      "Organisation of a music festival on the EPFL campus, with the goal to create a safe place for students, focusing on prevention and sustainability.",
       ]
     },
     {
@@ -60,8 +81,7 @@ const Experience = () => {
       organization: 'Polyquity',
       role: 'Member',
       period: '2022 - 2023',
-      description:[ 'Student organization working towards gender at the EPFL.', 
-        'My role was to comunicate and relate question, propose better option, to the administative comitee'
+      description:[ 'Student organization working towards gender at the EPFL. My role was to comunicate with the EPFL administration on school inclusivity policies'
         ]
     },
     {
@@ -69,7 +89,7 @@ const Experience = () => {
       organization: 'Coaching',
       role: 'Vice-President',
       period: '2020 - 2021',
-      description: 'Student organization for the first year starting their bachelor in mechanical.'
+      description: 'Student organization to integrate first-year mechanical students.',
     }
   ];
 
@@ -81,9 +101,9 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto mt-12">
           {/* Professional Experience */}
           <div className="mb-16">
-            <h4 className="text-xl font-bold text-primary mb-4">Semester Project</h4>
+            <h4 className="text-xl font-bold text-primary mb-4">Semester Projects</h4>
             <div className="space-y-12 mb-10">
-              {Semester_project.map((exp, index) => (
+              {Semester_projects.map((exp, index) => (
                 <div
                   key={index}
                   className="card hover:shadow-lg transition-shadow duration-300"
@@ -91,7 +111,18 @@ const Experience = () => {
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div>
                       <h4 className="text-xl font-bold text-primary">{exp.title}</h4>
-                      <p className="text-lg text-gray-600">{exp.company}</p>
+                      {exp.companyUrl ? (
+                        <a
+                          href={exp.companyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-lg text-gray-600 underline hover:text-primary"
+                        >
+                          {exp.company}
+                        </a>
+                      ) : (
+                        <p className="text-lg text-gray-600">{exp.company}</p>
+                      )}
                       <p className="text-gray-500">{exp.location}</p>
                     </div>
                     <p className="text-primary font-medium mt-2 md:mt-0">{exp.period}</p>
@@ -101,22 +132,38 @@ const Experience = () => {
                       <li key={itemIndex}>{item}</li>
                     ))}
                   </ul>
-                  {exp.website && (
-                    <a
-                      href={exp.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-4 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
-                    >
-                      View Project Website
-                    </a>
+                  {(exp.website || exp.githubUrl) && (
+                    <div className="mt-4 flex gap-3">
+                      {exp.website && (
+                        <a
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+                        >
+                          More Info
+                        </a>
+                      )}
+                      {exp.githubUrl && (
+                        <a
+                          href={exp.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-3 py-1 bg-gray-800 text-white rounded hover:bg-black transition-colors duration-200"
+                          aria-label="View on GitHub"
+                          title="GitHub"
+                        >
+                          <FaGithub className="text-lg" />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               ))}
             </div>
             <h3 className="text-2xl font-bold text-primary mb-8">Professional Experience</h3>
             <div className="space-y-12">
-              {experiences.map((exp, index) => (
+              {workingExperiences.map((exp, index) => (
                 <div
                   key={index}
                   className="card hover:shadow-lg transition-shadow duration-300"
@@ -134,6 +181,32 @@ const Experience = () => {
                       <li key={itemIndex}>{item}</li>
                     ))}
                   </ul>
+                  {(exp.website || exp.githubUrl) && (
+                    <div className="mt-4 flex gap-3">
+                      {exp.website && (
+                        <a
+                          href={exp.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+                        >
+                          More Info
+                        </a>
+                      )}
+                      {exp.githubUrl && (
+                        <a
+                          href={exp.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-3 py-1 bg-gray-800 text-white rounded hover:bg-black transition-colors duration-200"
+                          aria-label="View on GitHub"
+                          title="GitHub"
+                        >
+                          <FaGithub className="text-lg" />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

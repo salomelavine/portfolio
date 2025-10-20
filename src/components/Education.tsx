@@ -5,36 +5,33 @@ import React from 'react';
 const Education = () => {
   const education = [
     {
-      degree: "Master's in Energy Science and Technology",
-      institution: "École Polytechnique Fédérale de Lausanne (EPFL)",
+      degree: "MSc in Energy Science and Technology",
+      institution: "École Polytechnique Fédérale de Lausanne",
+      institutionUrl: "https://www.epfl.ch/education/master/programs/energy-science-and-technology/",
       location: "Lausanne, Switzerland",
-      period: "2022 - Present",
+      period: "2024 - Present",
       description: [
         "Specializing A : in renewable energy systems and sustainable technologies",
-        "Research focus on solar energy optimization and energy storage solutions",
-        "Key coursework: Smart Grid, Power systel Analysis, Convex optimization, Aplied Data Analyses",
-        "École Polytechnique Fédérale de Lausanne ", <a href="https://www.epfl.ch/education/master/programs/energy-science-and-technology/" target="red" rel="noopener noreferrer">EPFL</a> ,
+        "Key courses : Smart Grid Technologies , Power system Analysis, Convex Optimization, Aplied Data Analysis",
       ]
     },
     {
-      degree: "Bachelor's in Mechanical Engineering",
-      institution: "École Polytechnique Fédérale de Lausanne (EPFL)",
+      degree: "BSc in Mechanical Engineering",
+      institution: "École Polytechnique Fédérale de Lausanne",
+      institutionUrl: "https://www.epfl.ch/education/bachelor/programs/mechanical-engineering/",
       location: "Lausanne, Switzerland",
       period: "2019 - 2022",
       description: [
-        "Foundation in engineering principles and system design",
-        "Focus on energy systems and thermal engineering",
-        "Relevant coursework: Mechanis, dynamics, Thermodynamics, Fluid Mechanics, Heat and Mass Transfer",
-        "École Polytechnique Fédérale de Lausanne ", <a href="https://www.epfl.ch/education/bachelor/programs/mechanical-engineering/" target="red" rel="noopener noreferrer">EPFL</a> ,
+        "Key courses : Mechanics, Dynamics, Vubratung Mechanics, Thermodynamics, Fluid Mechanics, Heat and Mass Transfer",
       ]
     }, 
     {
-      degree: "High school and college ?8?", 
+      degree: "High school", 
       institution: "Ecole Alsacienne", 
       location: "Paris, France", 
       description:[
         "Graduated Scientific Baccalauréat, specialization in physics and chemistry, option ancient grec Highest honours - mention Très Bien",
-        "Multiple international experiences : Humanitarian trip to Senegal (1 week in 2017) ; Education and linguistic exchange in New York (1 month in 2015) ; Education and linguistic exchange in San Francisco (2 weekk in 2015)"
+        "Multiple international experiences : Humanitarian trip to Senegal (1 week in 2017) ; Education and linguistic exchange in New York (1 month in 2015) ; Education and linguistic exchange in San Francisco (2 weeks in 2015)"
       ]
     }
   ];
@@ -54,7 +51,18 @@ const Education = () => {
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-primary">{edu.degree}</h3>
-                    <p className="text-lg text-gray-600">{edu.institution}</p>
+                    {edu.institutionUrl ? (
+                      <a
+                        href={edu.institutionUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-lg text-gray-600 underline hover:text-primary"
+                      >
+                        {edu.institution}
+                      </a>
+                    ) : (
+                      <p className="text-lg text-gray-600">{edu.institution}</p>
+                    )}
                     <p className="text-gray-500">{edu.location}</p>
                   </div>
                   <p className="text-primary font-medium mt-2 md:mt-0">{edu.period}</p>

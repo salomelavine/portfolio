@@ -12,23 +12,20 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-600">
-                I am an Energy Engineer with a strong focus on renewable energy systems 
-                and sustainable technology solutions. Currently pursuing my studies at 
+                I am an Energy Engineer with a strong focus on the Energy transition.
+                Currently pursuing my studies at 
                 École Polytechnique Fédérale de Lausanne (EPFL), I am passionate about 
                 developing innovative solutions for a sustainable future.
               </p>
               
               <p className="text-lg text-gray-600">
-                My expertise lies in energy optimization, solar systems, and sustainable 
-                building design. I combine technical knowledge with practical experience 
-                to create efficient and environmentally conscious solutions.
+                My expertise lies in energy optimization and electrical grid knowledge.
+                Combining my mechanical engineering background and electrical, I've built strong knowledge and skills in energy generation and transmission. 
               </p>
               
               <p className="text-lg text-gray-600">
                 Through my academic and professional journey, I have developed strong 
-                analytical skills and a deep understanding of energy systems. I am 
-                constantly seeking opportunities to contribute to projects that make 
-                a positive impact on our environment.
+                analytical skills and a deep understanding of energy systems. And more soft skills threw groups projetcs and 
               </p>
             </div>
             
@@ -37,10 +34,9 @@ const About = () => {
                 <h3 className="text-xl font-bold text-primary mb-4">Key Interests</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li>• Renewable Energy Systems</li>
-                  <li>• Energy Storage Solutions</li>
-                  <li>• Sustainable Building Design</li>
-                  <li>• Energy Efficiency Optimization</li>
-                  <li>• Clean Technology Innovation</li>
+                  <li>• Energy Storage Solutions, BESS</li>
+                  <li>• Energical transition solutions </li>
+                  <li>• Grid market and frequency balacing </li>
                 </ul>
               </div>
               
@@ -49,14 +45,7 @@ const About = () => {
                 <p className="text-gray-600">
                   Master's in Energy Science and Technology<br />
                   École Polytechnique Fédérale de Lausanne
-                  <a
-                    href="https://www.epfl.ch/education/master/programs/energy-science-and-technology/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block ml-2 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200 text-sm"
-                  >
-                    EPFL
-                  </a>
+               
                 </p>
               </div>
             </div>
