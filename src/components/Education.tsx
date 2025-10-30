@@ -11,8 +11,8 @@ const Education = () => {
       location: "Lausanne, Switzerland",
       period: "2024 - Present",
       description: [
-        "Specializing A : in renewable energy systems and sustainable technologies",
-        "Key courses : Smart Grid Technologies , Power system Analysis, Convex Optimization, Aplied Data Analysis",
+        "Specializing A : renewable energy systems and sustainable technologies",
+        "Key courses : Smart Grid Technologies , Power system Analysis, Convex Optimization, Applied Data Analysis",
       ]
     },
     {
@@ -37,7 +37,7 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Education</h2>
         

@@ -11,12 +11,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-600">
-                I am an Energy Engineer with a strong focus on the Energy transition.
-                Currently pursuing my studies at 
-                École Polytechnique Fédérale de Lausanne (EPFL), I am passionate about 
-                developing innovative solutions for a sustainable future.
-              </p>
+          
               
               <p className="text-lg text-gray-600">
                 My expertise lies in energy optimization and electrical grid knowledge.
@@ -25,7 +20,11 @@ const About = () => {
               
               <p className="text-lg text-gray-600">
                 Through my academic and professional journey, I have developed strong 
-                analytical skills and a deep understanding of energy systems. And more soft skills threw groups projetcs and 
+                analytical skills and a deep understanding of energy systems. And more soft skills threw groups projetcs and associative experiences.
+              </p>
+              <p className="text-lg text-gray-600">
+                As a French and Canadian national, I’ve developed strong adaptability while studying and living abroad in Switzerland.
+
               </p>
             </div>
             
@@ -36,7 +35,8 @@ const About = () => {
                   <li>• Renewable Energy Systems</li>
                   <li>• Energy Storage Solutions, BESS</li>
                   <li>• Energical transition solutions </li>
-                  <li>• Grid market and frequency balacing </li>
+                  <li>• Power systems</li>
+                  <li>• Electrical Grid market and frequency balacing </li>
                 </ul>
               </div>
               

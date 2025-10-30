@@ -24,6 +24,7 @@ const Experience = () => {
     period: 'septembre 2025- current',
     description: [
       'At the DESL Lab, supervised under a Phd, I modelled optimal bidding strategies for renewables and BESSs in 15-minute European electricity markets using Python and optimization. After the goal is to use thedata from the EPEX-spot EU market, to compare the results.',
+      'Based on the paper : Optimal Offering of Energy Storage in Electricity Markets With Loop Blocks published by IEEE.',
       'Tools : CXVPY, Gurobi',
     ],
     githubUrl: 'https://github.com/DESL-EPFL/ESS-loop-blocks',
@@ -139,7 +140,7 @@ const Experience = () => {
                           href={exp.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+                          className="inline-block px-3 py-1 bg-primary text-white rounded hover:bg-primary-light transition-colors duration-200"
                         >
                           More Info
                         </a>
@@ -149,7 +150,7 @@ const Experience = () => {
                           href={exp.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-3 py-1 bg-gray-800 text-white rounded hover:bg-black transition-colors duration-200"
+                          className="inline-flex items-center px-3 py-1 bg-primary text-white rounded hover:bg-primary-light transition-colors duration-200"
                           aria-label="View on GitHub"
                           title="GitHub"
                         >
@@ -188,7 +189,7 @@ const Experience = () => {
                           href={exp.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200"
+                          className="inline-block px-3 py-1 bg-primary text-white rounded hover:bg-primary-light transition-colors duration-200"
                         >
                           More Info
                         </a>
@@ -198,7 +199,7 @@ const Experience = () => {
                           href={exp.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-3 py-1 bg-gray-800 text-white rounded hover:bg-black transition-colors duration-200"
+                          className="inline-flex items-center px-3 py-1 bg-primary text-white rounded hover:bg-primary-light transition-colors duration-200"
                           aria-label="View on GitHub"
                           title="GitHub"
                         >

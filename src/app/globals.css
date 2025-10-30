@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  /* Primary Colors - Beige Brown theme */
-  --primary: 176, 110, 67;
-  --primary-dark: 163, 123, 180;
-  --primary-light: 131, 73, 36;
+  /* Primary Colors - Custom Blue theme */
+  --primary: 1, 40, 64;
+  --primary-dark: 73, 102, 140;
+  --primary-light: 173, 184, 217;
   
   /* Text Colors */
   --text-dark: 51, 51, 51;
@@ -112,11 +112,11 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark;
+    @apply bg-primary text-white hover:bg-primary-light;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-gray-700;
+    @apply bg-primary text-white hover:bg-primary-light;
   }
 
   .section {

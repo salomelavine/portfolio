@@ -48,8 +48,8 @@ const Header = () => {
               </a>
             ))}
             <a
-              href="/project/cv-2.pdf"
-              download="Salome_Lavine_CV.pdf"
+              href="/project/CV_salomé_Lavine.pdf"
+              download="CV_Salome_Lavine.pdf"
               className="text-gray-700 hover:text-primary transition-colors"
               title="Download CV"
             >
@@ -96,8 +96,8 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="/project/cv-2.pdf"
-                download="Salome_Lavine_CV.pdf"
+                href="/project/CV_salomé_Lavine.pdf"
+                download="CV_Salome_Lavine.pdf"
                 className="text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
                 title="Download CV"
