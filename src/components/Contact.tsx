@@ -1,3 +1,4 @@
+/*
 'use client';
 
 import React, { useState } from 'react';
@@ -62,7 +63,7 @@ const Contact = () => {
         
         <div className="max-w-4xl mx-auto mt-12">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Form *//*
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6">Get in Touch</h3>
               
@@ -123,7 +124,7 @@ const Contact = () => {
               </form>
             </div>
             
-            {/* Social Links */}
+            {/* Social Links *//*
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6">Connect With Me</h3>
               
@@ -155,4 +156,5 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
+*/ 
