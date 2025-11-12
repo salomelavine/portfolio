@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
 
           <p className="text-sm md:text-xl text-gray-600 mb-8">
-            Seecking for a six months internship starting in febuary 2026 
+            Seecking for a six months internship starting in february 2026 
           </p>
           
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
